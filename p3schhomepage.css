@@ -53,94 +53,84 @@ footer {
 /* WRITE YOUR CODE BELOW HERE */
 
 
-/* WRITE YOUR CODE BELOW HERE */
+/*Text Styles*/
 
-
-/* Fonts */
-
-@font-face {
-    font-family: 'SerifFont';
-    src: url('path/to/serif-font.woff2') format('woff2'), url('path/to/serif-font.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SansSerifFont';
-    src: url('path/to/sans-serif-font.woff2') format('woff2'), url('path/to/sans-serif-font.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: 'SerifFont', serif;
+html {
+    font-family: lovatolight, serif;
+    /* Default font family */
     font-size: 10px;
-    /* Site-wide font-size */
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'SansSerifFont', sans-serif;
-    /* Apply heading font to headings */
-    font-size: 2em;
-    /* Example of appropriate font-size for headings */
-    line-height: 1.2;
-    /* Example of appropriate line-height for headings */
+h2 {
+    font-family: josefin_slabbold, sans-serif;
+    /* Heading font family */
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 5rem;
+    /* Font size for h1 */
     text-align: center;
-    /* Center top level heading */
-    letter-spacing: 0.1em;
-    /* Add letter-spacing to headings */
+    /* Center align h1 */
 }
 
-p {
-    font-size: 1.2em;
-    /* Example of appropriate font-size for body text */
-    line-height: 1.6;
-    /* Example of appropriate line-height for body text */
-    letter-spacing: 0.02em;
-    /* Add letter-spacing to body text */
-    word-spacing: 0.1em;
-    /* Add word-spacing to body text */
+h2 {
+    font-size: 3.2rem;
+    /* Font size for h2 */
 }
 
-section p:first-of-type {
+section h2+p {
     text-indent: 20px;
-    /* Text indentation for first paragraph after each heading in section */
+    /* Indent paragraphs following h2 in sections */
+}
+
+p,
+li {
+    font-size: 1.6rem;
+    /* Font size for paragraphs and list items */
+    line-height: 1.5;
+    /* Line height for paragraphs and list items */
+    letter-spacing: 0.5px;
+    /* Letter spacing for paragraphs and list items */
+    word-spacing: 3px;
+    /* Word spacing for paragraphs and list items */
 }
 
 
-/* Links */
+/* Link Styling */
 
-a,
+a {
+    outline: none;
+    /* Remove outline of the links */
+}
+
+a[href*="http"] {
+    padding-right: 19px;
+    /* Add padding to links with http in href */
+    background: url(external-link-52.png) no-repeat 100% 0;
+    /* Add external link icon */
+    background-size: 16px 16px;
+    /* Set size of external link icon */
+}
+
+a:link,
 a:visited {
     color: #a66;
-    /* Colors that go with the horizontal bars */
-    text-decoration: none;
-    /* Remove underline by default */
-    border-bottom: 1px solid transparent;
-    /* Add underline */
+    /* Link color */
 }
 
-a:hover,
-a:focus {
-    border-bottom: none;
-    /* Remove underline on hover/focus */
-}
-
-a:focus {
-    outline: none;
-    /* Remove default focus outline */
-}
-
-a:hover,
 a:focus,
+a:hover {
+    text-decoration: none;
+    /* Remove underline on hover and focus */
+}
+
 a:active {
-    color: #333;
-    /* Active state styling */
+    color: transparent;
+    /* Link color when active */
+    text-shadow: 0px 0px 1px #f00, 0px 0px 2px #f00, 0px 0px 3px black, 0px 0px 4px black;
+    /* Text shadow on active */
 }
 
 
@@ -148,32 +138,50 @@ a:active {
 
 ul,
 ol {
-    padding: 10px 0;
-    /* Spacing between lists */
+    margin: 1.6rem 0;
+    /* Margin for unordered and ordered lists */
 }
 
-li {
-    line-height: 1.6;
-    /* Same line-height as paragraphs */
-    list-style-type: disc;
-    /* Nice bullet appropriate for the design */
+ul {
+    list-style-type: square;
+    /* List style for unordered lists */
+}
+
+ol {
+    list-style-type: lower-latin;
+    /* List style for ordered lists */
 }
 
 
-/* Navigation menu */
-
-nav {
-    padding-top: 20px;
-    /* Adjust height to harmonize with the page */
-    width: 20%;
-    /* Adjust width for vertical nav menu */
-}
+/* nav menu */
 
 nav ul {
-    list-style: none;
+    padding-left: 0;
+    margin-top: 0.8rem;
 }
 
-nav ul li {
-    margin-bottom: 10px;
-    /* Spacing between navigation items */
+nav li {
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+nav li a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    line-height: 3;
+    text-align: center;
+    font-size: 2.5rem;
+    border: 1px solid #a66;
+}
+
+nav li a:focus,
+nav li a:hover {
+    color: white;
+    background: #a66;
+}
+
+nav li a:active {
+    color: white;
+    background: black;
 }
