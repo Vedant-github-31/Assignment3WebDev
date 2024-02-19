@@ -1,0 +1,179 @@
+/* General setup */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+}
+
+
+/* Layout */
+
+section {
+    float: left;
+    width: 50%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+    padding: 20px;
+}
+
+
+/* header and footer */
+
+header,
+footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+
+
+/* WRITE YOUR CODE BELOW HERE */
+
+
+/* WRITE YOUR CODE BELOW HERE */
+
+
+/* Fonts */
+
+@font-face {
+    font-family: 'SerifFont';
+    src: url('path/to/serif-font.woff2') format('woff2'), url('path/to/serif-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SansSerifFont';
+    src: url('path/to/sans-serif-font.woff2') format('woff2'), url('path/to/sans-serif-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SerifFont', serif;
+    font-size: 10px;
+    /* Site-wide font-size */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'SansSerifFont', sans-serif;
+    /* Apply heading font to headings */
+    font-size: 2em;
+    /* Example of appropriate font-size for headings */
+    line-height: 1.2;
+    /* Example of appropriate line-height for headings */
+    text-align: center;
+    /* Center top level heading */
+    letter-spacing: 0.1em;
+    /* Add letter-spacing to headings */
+}
+
+p {
+    font-size: 1.2em;
+    /* Example of appropriate font-size for body text */
+    line-height: 1.6;
+    /* Example of appropriate line-height for body text */
+    letter-spacing: 0.02em;
+    /* Add letter-spacing to body text */
+    word-spacing: 0.1em;
+    /* Add word-spacing to body text */
+}
+
+section p:first-of-type {
+    text-indent: 20px;
+    /* Text indentation for first paragraph after each heading in section */
+}
+
+
+/* Links */
+
+a,
+a:visited {
+    color: #a66;
+    /* Colors that go with the horizontal bars */
+    text-decoration: none;
+    /* Remove underline by default */
+    border-bottom: 1px solid transparent;
+    /* Add underline */
+}
+
+a:hover,
+a:focus {
+    border-bottom: none;
+    /* Remove underline on hover/focus */
+}
+
+a:focus {
+    outline: none;
+    /* Remove default focus outline */
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #333;
+    /* Active state styling */
+}
+
+
+/* Lists */
+
+ul,
+ol {
+    padding: 10px 0;
+    /* Spacing between lists */
+}
+
+li {
+    line-height: 1.6;
+    /* Same line-height as paragraphs */
+    list-style-type: disc;
+    /* Nice bullet appropriate for the design */
+}
+
+
+/* Navigation menu */
+
+nav {
+    padding-top: 20px;
+    /* Adjust height to harmonize with the page */
+    width: 20%;
+    /* Adjust width for vertical nav menu */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+    /* Spacing between navigation items */
+}
